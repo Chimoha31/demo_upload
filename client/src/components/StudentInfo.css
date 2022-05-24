@@ -1,0 +1,23 @@
+.students_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.student_card {
+  border: 1px solid #333;
+  padding: 10px 40px;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.edit_delete {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.edit_delete li {
+  padding: 0 10px;
+}
