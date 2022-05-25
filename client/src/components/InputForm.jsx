@@ -15,13 +15,14 @@ const InputForm = () => {
     setNewStudent({...newStudent, photo: e.target.files[0]});
     console.log(newStudent.photo);
   }
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("photo", newStudent.photo)
     formData.append("email", newStudent.email)
     formData.append("name", newStudent.name)
+    console.log(newStudent.photo.name);
   }
 
   
@@ -39,12 +40,14 @@ const InputForm = () => {
         type="text"
         placeholder="name"
         name="name"
+        value={newStudent.name}
         onChange={handleChange}
-      />
+        />
       <input
         type="text"
         placeholder="Email"
         name="email"
+        value={newStudent.email}
         onChange={handleChange}
       />
 
